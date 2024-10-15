@@ -64,3 +64,29 @@ console.log(external2);
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+console.log(`============ Opdracht 3 ============`);
+
+function checkEmailValidity(email) {
+    const hasAt = email.includes(`@`);
+    const hasComma = email.includes(`,`);
+    const lastCharIsDot = email.at(email.length - 1) === `.`;
+    if (hasAt && !hasComma && !lastCharIsDot) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(checkEmailValidity("n.eeken@novi.nl"));
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eekenanovi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
+console.log(checkEmailValidity("tessmellink@novi,nl"));
+
+
+
+
+
+
+
+
