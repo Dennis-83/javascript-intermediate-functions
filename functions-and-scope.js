@@ -66,6 +66,19 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+console.log(`============ Opdracht 2a ============`);
+
+// Stap 1: Maak variabele aan om het totaal in op te slaan.
+// Stap 2: Gebruik een for loop om door de array te itereren en aan totaal toe te voegen.
+// Stap 3: Deel totaal door het aantal cijfers en sla het op in gemiddelde variabele.
+
+let total = 0;
+for (let i = 0; i < grades.length; i++) {
+    total = total + grades[i];
+}
+const average = total / grades.length;
+
+console.log(average);
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
@@ -77,11 +90,36 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 // averageGrade(grades) geeft 6.642857142857143
 // averageGrade([6, 4, 5]) geeft 5
 // averageGrade([8, 9, 4, 6, 10]) geeft 7.4
+console.log(`============ Opdracht 2b ============`);
+
+function averageGrade(numbersArray) {
+    let total = 0;
+    for (let i = 0; i < numbersArray.length; i++) {
+        total = total + numbersArray[i];
+    }
+    const average = total / numbersArray.length;
+    return average;
+}
+
+const answer1 = averageGrade(grades); //geeft 6.642857142857143
+const answer2 = averageGrade([6, 4, 5]); //geeft 5
+const answer3 = averageGrade([8, 9, 4, 6, 10]); //geeft 7.4
+console.log(answer1);
+console.log(answer2);
+console.log(answer3);
 
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
+console.log(`============ Opdracht 2c ============`);
+
+function roundToTwoDecimals (number) {
+    const roundedNumber = Math.round(number * 100) / 100;
+    return  roundedNumber;
+}
+
+console.log(roundToTwoDecimals(answer1));
 
 
 /* Bonusopdracht: hoogste cijfer */
