@@ -9,7 +9,7 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
-
+console.log(`Hello World!`);
 
 
 /* Opdracht  2 */
