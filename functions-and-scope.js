@@ -114,9 +114,9 @@ console.log(answer3);
 // Tip: Google is your best friend!
 console.log(`============ Opdracht 2c ============`);
 
-function roundToTwoDecimals (number) {
+function roundToTwoDecimals(number) {
     const roundedNumber = Math.round(number * 100) / 100;
-    return  roundedNumber;
+    return roundedNumber;
 }
 
 console.log(roundToTwoDecimals(answer1));
@@ -132,6 +132,20 @@ console.log(roundToTwoDecimals(answer1));
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+console.log(`============ Opdracht 3a ============`);
+
+// Stap 1: Maak variabele voor het hoogste cijfer aan.
+// Stap 2: Gebruik een for loop om door de array to itereren.
+// Stap 3: Check of elke waarde hoger is dan het huidige hoogste cijfer.
+// Stap 4: Zo ja, sla deze op. Zo nee, ga verder.
+
+let highGrade = 0;
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] > highGrade) {
+        highGrade = grades[i];
+    }
+}
+console.log(highGrade);
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
@@ -143,3 +157,18 @@ console.log(roundToTwoDecimals(answer1));
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+console.log(`============ Opdracht 3b ============`);
+
+function highestGrade(numbersArray) {
+    let highGrade = 0;
+    for (let i = 0; i < numbersArray.length; i++) {
+        if (numbersArray[i] > highGrade) {
+            highGrade = numbersArray[i];
+        }
+    }
+    return highGrade;
+}
+
+console.log(highestGrade(grades));
+console.log(highestGrade([6, 4, 5]));
+console.log(highestGrade([8, 9, 4, 6, 10]));
